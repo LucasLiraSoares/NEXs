@@ -1,0 +1,41 @@
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
+body {color: white; background: black; overflow-x: hidden;}
+
+#bg-video {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  z-index: -1; filter: brightness(50%);
+}
+
+header {position: fixed; width: 100%; top: 0; left: 0; background: rgba(0,0,0,0.6); padding: 10px 40px; z-index: 1000;}
+header .hub {display: flex; justify-content: space-between; align-items: center;}
+header ul {display: flex; gap: 20px; list-style: none;}
+header a {color: white; text-decoration: none; font-weight: bold;}
+header a:hover {color: #a855f7;}
+
+.hero {height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+.hero h1 {font-size: 4rem; animation: fadeIn 2s;}
+.hero p {font-size: 1.5rem; margin-top: 10px;}
+
+.carousel-section {padding: 100px 40px; text-align: center;}
+.carousel {display: flex; overflow: hidden; justify-content: center; align-items: center;}
+.slide {min-width: 300px; margin: 0 15px; opacity: 0.4; transition: 0.5s;}
+.slide.active {opacity: 1; transform: scale(1.1);}
+.prev, .next {background: transparent; border: none; font-size: 2rem; color: white; cursor: pointer;}
+
+.timeline {padding: 100px 40px; background: rgba(0,0,0,0.6);}
+.timeline-container {display: flex; flex-direction: column; gap: 20px; border-left: 2px solid #a855f7; padding-left: 20px;}
+.timeline-item {font-size: 1.2rem; position: relative;}
+.timeline-item::before {content: '●'; position: absolute; left: -30px; color: #a855f7;}
+
+.releases {padding: 100px 40px; text-align: center;}
+.release-card {background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; display: inline-block;}
+.release-card img {width: 200px; border-radius: 10px;}
+
+.media {padding: 100px 40px; text-align: center;}
+footer {padding: 20px; background: rgba(0,0,0,0.8); text-align: center;}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
